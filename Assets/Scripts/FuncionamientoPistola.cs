@@ -12,7 +12,6 @@ public class FuncionamientoPistola : MonoBehaviour
     void Update()
     {
         Shoot();
-        Puntaje();
     }
     public void Shoot()
     {
@@ -24,10 +23,5 @@ public class FuncionamientoPistola : MonoBehaviour
             bullet.SetActive(true);
             bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
         }
-    }
-
-    void Puntaje() { // función para mostrar el puntaje en pantalla
-        // GameObject.FindObjectOfType<UnityEngine.UI.Text>().text = "Puntuación  " + ObjetivosManager.Instance.puntos;
-        GameObject.FindWithTag("Score").GetComponent<Text>().text = "Puntuación " + ObjetivosManager.Instance.puntos;
     }
 }
