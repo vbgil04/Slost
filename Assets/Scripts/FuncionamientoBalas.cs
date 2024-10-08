@@ -19,6 +19,15 @@ public class FuncionamientoBalas : MonoBehaviour
         if (collision.gameObject.CompareTag("Disparable")) {
             gameObject.SetActive(false); 
             Debug.Log("Bala destruida");
+
+            var slime = PoolManager.Instance.GetSlime();
+            if(slime == null){
+                Debug.Log("No hay slimes en el pool");
+                return;
+            }
+            ContactPoint contact = collision.GetContact(0);
+            slime.transform.position = contact.point;
+            slime.SetActive(true);
         }
     }
 }

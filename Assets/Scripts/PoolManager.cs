@@ -6,8 +6,11 @@ public class PoolManager : MonoBehaviour
 {
     public static PoolManager Instance;
     public GameObject balasPrefab;
+    public GameObject slimePrefab;
      public int BulletPoolSize = 20;
+    public int SlimePoolSize = 20;
       public List<GameObject> bulletPool; // pool de balas
+      public List<GameObject> slimePool; // pool de enemigos
       void Awake() {
         if (Instance == null) { 
             Instance = this;
@@ -15,6 +18,7 @@ public class PoolManager : MonoBehaviour
             Destroy(gameObject);
         } 
         bulletPool = CreatePool(balasPrefab, BulletPoolSize); // creo los pools
+        slimePool = CreatePool(slimePrefab, SlimePoolSize);
     }
     List<GameObject> CreatePool(GameObject prefab, int size){ 
         var lista = new List<GameObject>(); 
@@ -31,9 +35,14 @@ public class PoolManager : MonoBehaviour
                 return obj;
             }
         }
-        GameObject objN = Instantiate(balasPrefab);
-        objN.SetActive(false);
-        bulletPool.Add(objN);
-        return objN;
+        return null;
+    }
+    public GameObject GetSlime(){
+        foreach (GameObject obj in slimePool) {
+            if (!obj.activeInHierarchy) {
+                return obj;
+            }
+        }
+        return null;
     }
 }
