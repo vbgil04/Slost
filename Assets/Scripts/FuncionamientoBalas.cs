@@ -15,19 +15,25 @@ public class FuncionamientoBalas : MonoBehaviour
             gameObject.SetActive(false); // desactivo la bala
         }
     }
+
     void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Disparable")) {
             gameObject.SetActive(false); 
             Debug.Log("Bala destruida");
 
             var slime = PoolManager.Instance.GetSlime();
-            if(slime == null){
-                Debug.Log("No hay slimes en el pool");
+            if(slime == null ){
+                Debug.Log("Max Slimes alcanzado");
                 return;
-            }
+            } 
             ContactPoint contact = collision.GetContact(0);
             slime.transform.position = contact.point;
+            slime.transform.rotation = Quaternion.LookRotation(contact.normal);
             slime.SetActive(true);
+            GlobalVariables.cantSlimes++;
+        } else if (collision.gameObject.CompareTag("Slime")) {
+            gameObject.SetActive(false);
+            Debug.Log("Bala destruida");
         }
     }
 }
