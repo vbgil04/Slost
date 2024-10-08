@@ -17,7 +17,6 @@ public class FuncionamientoBalas : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Disparable")) {
-
             gameObject.SetActive(false); 
             Debug.Log("Bala destruida");
         }
