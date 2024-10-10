@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player_Move : MonoBehaviour
 {
     public CharacterController controller;
-    public float speed = 12f;
+    private float speed;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
 
@@ -19,6 +19,7 @@ public class Player_Move : MonoBehaviour
     void Update()
     {
         // Comprueba si el personaje está en el suelo
+        speed = GlobalVariables.playerSpeed;
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
@@ -34,7 +35,7 @@ public class Player_Move : MonoBehaviour
         controller.Move(move * speed * Time.deltaTime);
 
         // Salto
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }

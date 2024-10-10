@@ -689,6 +689,8 @@ GameObject:
   - component: {fileID: 697661474}
   - component: {fileID: 697661473}
   - component: {fileID: 697661472}
+  - component: {fileID: 697661477}
+  - component: {fileID: 697661478}
   m_Layer: 0
   m_Name: Personaje_mov
   m_TagString: Untagged
@@ -709,10 +711,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 697661473}
-  speed: 8
   gravity: -9.81
-  jumpHeight: 3
-  groundCheck: {fileID: 697661476}
+  jumpHeight: 1
+  groundCheck: {fileID: 591605518}
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
@@ -802,7 +803,7 @@ Transform:
   m_GameObject: {fileID: 697661471}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.33, z: -6.43}
+  m_LocalPosition: {x: 0, y: 1.68, z: -6.43}
   m_LocalScale: {x: 0.75, y: 1, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -810,6 +811,39 @@ Transform:
   - {fileID: 591605518}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &697661477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697661471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec58be38297481a42b705ee0230093cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &697661478
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697661471}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,7 +1086,7 @@ GameObject:
   - component: {fileID: 1275382216}
   - component: {fileID: 1275382215}
   - component: {fileID: 1275382214}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Suelo
   m_TagString: Disparable
   m_Icon: {fileID: 0}
@@ -1176,8 +1210,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   balasPrefab: {fileID: 4956584196192127714, guid: 3e0424f9f91a340468cbe7e53a207aaf, type: 3}
   slimePrefab: {fileID: 2610694002186098483, guid: 226a3e63d061f3f4d86f29bc65181e2c, type: 3}
-  BulletPoolSize: 5
-  SlimePoolSize: 5
   bulletPool: []
   slimePool: []
 --- !u!4 &1312340908

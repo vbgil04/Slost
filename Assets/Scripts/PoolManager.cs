@@ -7,8 +7,8 @@ public class PoolManager : MonoBehaviour
     public static PoolManager Instance;
     public GameObject balasPrefab;
     public GameObject slimePrefab;
-     public int BulletPoolSize = 20;
-    public int SlimePoolSize = 20;
+    private int BulletPoolSize = 20;
+    private int SlimePoolSize = GlobalVariables.maxSlimes;
       public List<GameObject> bulletPool; // pool de balas
       public List<GameObject> slimePool; // pool de enemigos
       void Awake() {

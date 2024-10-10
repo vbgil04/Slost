@@ -18,7 +18,7 @@ public class FuncionamientoPistola : MonoBehaviour
     }
     public void Shoot()
     {
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0))
         {
            if(GlobalVariables.cantSlimes>=GlobalVariables.maxSlimes){
                 Debug.Log("No hay slimes en el pool");
@@ -34,7 +34,7 @@ public class FuncionamientoPistola : MonoBehaviour
     }
     public void RetornarSlime(){
         if(Input.GetKeyDown(KeyCode.R)){
-           slimes = GameObject.FindGameObjectsWithTag("Slime");
+           slimes = GameObject.FindGameObjectsWithTag("SlimeS");
            if(slimes.Length == 0){
                Debug.Log("No hay slimes en la escena");
                return;
