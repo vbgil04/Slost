@@ -31,7 +31,7 @@ public class FuncionamientoBalas : MonoBehaviour
             slime.transform.rotation = Quaternion.LookRotation(contact.normal);
             slime.SetActive(true);
             GlobalVariables.cantSlimes++;
-        } else if (collision.gameObject.CompareTag("Slime")) {
+        } else if (collision.gameObject.CompareTag("SlimeS")) {
             gameObject.SetActive(false);
             Debug.Log("Bala destruida");
         }
