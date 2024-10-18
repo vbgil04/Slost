@@ -17,8 +17,10 @@ public class Player_Slime : MonoBehaviour
     void Update() {
         if (collisionSlimeS) {
             Debug.Log("Manteniendo ralentización");
+            GlobalVariables.slime_collision = true;
         } else {
             Debug.Log("Velocidad normal");
+            GlobalVariables.slime_collision = false;
             GlobalVariables.playerSpeed = GlobalVariables.defaultPlayerSpeed;
         }
         collisionSlimeS = false;
