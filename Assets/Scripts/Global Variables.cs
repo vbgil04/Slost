@@ -8,4 +8,7 @@ public static class GlobalVariables
     public static int maxSlimes = 5;
     public static float playerSpeed = 8f;
     public static float defaultPlayerSpeed = 8f;
+
+    public static float jumpHeight = 1f;
+    public static float defaultJumpHeight = 1f;
 }

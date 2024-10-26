@@ -8,8 +8,8 @@ public class Player_Move : MonoBehaviour
     //VARIABLES DE MOVIMIENTO Y SALTO
     public CharacterController controller;
     private float speed;
+    private float jH;
     public float gravity = -9.81f;
-    public float jumpHeight = 3f;
 
     private Vector3 velocity;
     private bool isGrounded;
@@ -155,6 +155,7 @@ public class Player_Move : MonoBehaviour
     {
         // Comprueba si el personaje está en el suelo
         speed = GlobalVariables.playerSpeed;
+        jH = GlobalVariables.jumpHeight;
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
@@ -172,11 +173,11 @@ public class Player_Move : MonoBehaviour
         // Salto
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            velocity.y = Mathf.Sqrt(jH * -2f * gravity);
         }
 
         // Aplicar gravedad
-        velocity.y += gravity * Time.deltaTime;
+        velocity.y += 1.2f * gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
 
         //caida
