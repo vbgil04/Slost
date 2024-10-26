@@ -13,10 +13,14 @@ public class Player_Move : MonoBehaviour
 
     private Vector3 velocity;
     private bool isGrounded;
+    private bool isSlimed;
 
     public Transform groundCheck;
+    public Transform slimeCheck;
     public float groundDistance = 0.4f;
+    public float slimeDistance = 0.4f;
     public LayerMask groundMask;
+    public LayerMask slimeMask;
 
     //VARIABLES DE CAIDA
     public int maxHP, HP;
@@ -138,12 +142,16 @@ public class Player_Move : MonoBehaviour
                 {
                     safeHeightTranformation = 0;
                 }
-                dañoRecibido = (dañoPorMetro * (int)safeHeightTranformation);
-                dañoRecibidoTemporal += dañoRecibido;
-                HP -= (dañoPorMetro * (int)safeHeightTranformation);
-                if(HP <= 0)
+                //calculamos el daño y bajamos HP
+                if(!isSlimed)
                 {
-                    HP = 0;
+                    dañoRecibido = (dañoPorMetro * (int)safeHeightTranformation);
+                    dañoRecibidoTemporal += dañoRecibido;
+                    HP -= (dañoPorMetro * (int)safeHeightTranformation);
+                    if(HP <= 0)
+                    {
+                        HP = 0;
+                    }
                 }
             }
             tiempoCayendo = 0;
@@ -153,10 +161,11 @@ public class Player_Move : MonoBehaviour
     }
     void Update()
     {
-        // Comprueba si el personaje está en el suelo
+        // Comprueba si el personaje está en el suelo y/o en slime
         speed = GlobalVariables.playerSpeed;
         jH = GlobalVariables.jumpHeight;
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        isSlimed = Physics.CheckSphere(slimeCheck.position, slimeDistance, slimeMask);
 
         if (isGrounded && velocity.y < 0)
         {
