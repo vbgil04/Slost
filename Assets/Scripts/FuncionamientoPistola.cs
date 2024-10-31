@@ -9,8 +9,13 @@ public class FuncionamientoPistola : MonoBehaviour
     public Transform bulletSpawnPoint;
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
-
+    public GameObject municion;
     private GameObject[] slimes;
+    
+    void Start()
+    {
+        UpdateMunicion();
+    }
     void Update()
     {
         Shoot();
@@ -29,6 +34,7 @@ public class FuncionamientoPistola : MonoBehaviour
                 bullet.transform.rotation = bulletSpawnPoint.rotation;
                 bullet.SetActive(true);
                 bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
+                UpdateMunicion();
             }
         } 
     }
@@ -41,8 +47,15 @@ public class FuncionamientoPistola : MonoBehaviour
            } else {
                 slimes[0].SetActive(false);
                 GlobalVariables.cantSlimes--;
+                UpdateMunicion();
                 Debug.Log("Slime retornado");
            }
         }
+    }
+
+    //funcion auxiliar de UI
+    private void UpdateMunicion()
+    {
+        municion.GetComponent<Text>().text = (GlobalVariables.maxSlimes - GlobalVariables.cantSlimes) + " / " + (GlobalVariables.maxSlimes);
     }
 }
