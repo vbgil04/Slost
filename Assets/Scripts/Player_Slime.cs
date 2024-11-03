@@ -11,6 +11,7 @@ public class Player_Slime : MonoBehaviour
             collisionSlimeS = true;
             Debug.Log("Ralentizado");
             GlobalVariables.playerSpeed = 1f;
+            GlobalVariables.jumpHeight = 0.3f;
         }
     }
 
@@ -22,6 +23,7 @@ public class Player_Slime : MonoBehaviour
             Debug.Log("Velocidad normal");
             GlobalVariables.slime_collision = false;
             GlobalVariables.playerSpeed = GlobalVariables.defaultPlayerSpeed;
+            GlobalVariables.jumpHeight = GlobalVariables.defaultJumpHeight;
         }
         collisionSlimeS = false;
     }

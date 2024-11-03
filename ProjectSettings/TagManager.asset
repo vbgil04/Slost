@@ -9,6 +9,7 @@ TagManager:
   - SlimeT
   - SlimeP
   - Desplazable
+  - Objeto Interactivo
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
+  - Raycast Detect
+  - SlimeS
   - 
   - 
   - 
