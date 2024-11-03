@@ -1,4 +1,3 @@
-# SLOST
-
-NO HAGASI COMITS TODAVÍA, QUE FALTA HACER EL MERGE DEL OTRO REPOSITORIO 
-Y METERLO AQUÍ
+# Slime_GameLab
+En la escena del slime se mueve y dispara bien, también se instancian los 
+slimes bastante bien, todavía no tienen físicas los slimes
