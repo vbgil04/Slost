@@ -8,6 +8,7 @@ TagManager:
   - SlimeS
   - SlimeT
   - SlimeP
+  - Desplazable
   layers:
   - Default
   - TransparentFX
