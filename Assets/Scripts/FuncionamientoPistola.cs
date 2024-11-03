@@ -3,24 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class FuncionamientoPistola : MonoBehaviour
 {
     public Transform bulletSpawnPoint;
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
-
+    private bool slimeFuera = false; //sliem
     private GameObject[] slimes;
+    public GameObject balaFuera;
+
+    void Awake(){
+        balaFuera.SetActive(false);
+    }
     void Update()
     {
         Shoot();
         RetornarSlime();
+        SacarSlime();
+        GuardarSlime();
     }
-    public void Shoot()
-    {
-        if(Input.GetMouseButtonDown(0))
-        {
-           if(GlobalVariables.cantSlimes>=GlobalVariables.maxSlimes){
+    public void Shoot() {
+        if(Input.GetMouseButtonDown(0) && !slimeFuera){
+           if(GlobalVariables.cantSlimes>=GlobalVariables.maxSlimes) {
                 Debug.Log("No hay slimes en el pool");
                 return;
             } else {
@@ -31,6 +37,20 @@ public class FuncionamientoPistola : MonoBehaviour
                 bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
             }
         } 
+    }
+    public void SacarSlime(){
+        if(Input.GetMouseButton(1) && !slimeFuera){
+            Debug.Log("Slime sacado");
+            balaFuera.SetActive(true);
+            slimeFuera = true;
+        }
+    }
+    public void GuardarSlime(){
+        if(Input.GetMouseButtonUp(1) && slimeFuera){
+            Debug.Log("Slime guardado");
+            balaFuera.SetActive(false);
+            slimeFuera = false;
+        }
     }
     public void RetornarSlime(){
         if(Input.GetKeyDown(KeyCode.R)){

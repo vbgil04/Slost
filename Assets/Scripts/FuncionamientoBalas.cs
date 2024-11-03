@@ -5,7 +5,7 @@ using UnityEngine;
 public class FuncionamientoBalas : MonoBehaviour
 {
     public float vida;
-    public float nacimiento;
+    private float nacimiento;
  
     void OnEnable() {
         nacimiento = Time.time; // guardo el tiempo de nacimiento de la bala
