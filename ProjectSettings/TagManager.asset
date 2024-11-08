@@ -11,6 +11,9 @@ TagManager:
   - Desplazable
   - Objeto Interactivo
   - cogible
+  - ParedNormal
+  - SueloNormal
+  - TechoNormal
   layers:
   - Default
   - TransparentFX

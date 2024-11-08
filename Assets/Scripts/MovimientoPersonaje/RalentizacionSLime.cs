@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_Slime : MonoBehaviour
+public class RalentizacionSLime : MonoBehaviour
 {
     private bool collisionSlimeS = false;
 

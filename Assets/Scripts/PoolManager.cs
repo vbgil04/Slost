@@ -6,19 +6,27 @@ public class PoolManager : MonoBehaviour
 {
     public static PoolManager Instance;
     public GameObject balasPrefab;
-    public GameObject slimePrefab;
+    public GameObject slimePrefabSuelo;
+    public GameObject slimePrefabTecho;
+    public GameObject slimePrefabPared;
     private int BulletPoolSize = 20;
     private int SlimePoolSize = GlobalVariables.maxSlimes;
       public List<GameObject> bulletPool; // pool de balas
-      public List<GameObject> slimePool; // pool de enemigos
+      public List<GameObject> slimePoolSuelo; 
+      public List<GameObject> slimePoolTecho; 
+      public List<GameObject> slimePoolPared;
       void Awake() {
         if (Instance == null) { 
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         } else {
             Destroy(gameObject);
+            return;
         } 
         bulletPool = CreatePool(balasPrefab, BulletPoolSize); // creo los pools
-        slimePool = CreatePool(slimePrefab, SlimePoolSize);
+        slimePoolSuelo = CreatePool(slimePrefabSuelo, SlimePoolSize);
+        slimePoolTecho = CreatePool(slimePrefabTecho, SlimePoolSize);
+        slimePoolPared = CreatePool(slimePrefabPared, SlimePoolSize);
     }
     List<GameObject> CreatePool(GameObject prefab, int size){ 
         var lista = new List<GameObject>(); 
@@ -37,8 +45,24 @@ public class PoolManager : MonoBehaviour
         }
         return null;
     }
-    public GameObject GetSlime(){
-        foreach (GameObject obj in slimePool) {
+    public GameObject GetSlimeSuelo(){
+        foreach (GameObject obj in slimePoolSuelo) {
+            if (!obj.activeInHierarchy) {
+                return obj;
+            }
+        }
+        return null;
+    }
+    public GameObject GetSlimeTecho(){
+        foreach (GameObject obj in slimePoolTecho) {
+            if (!obj.activeInHierarchy) {
+                return obj;
+            }
+        }
+        return null;
+    }
+    public GameObject GetSlimePared(){
+        foreach (GameObject obj in slimePoolPared) {
             if (!obj.activeInHierarchy) {
                 return obj;
             }
