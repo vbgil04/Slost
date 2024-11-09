@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8960646056066789035}
   - component: {fileID: 5196653899181040417}
   - component: {fileID: 1821533888691514910}
+  - component: {fileID: -2950085870214111926}
   m_Layer: 8
   m_Name: SlimeP
   m_TagString: SlimeP
@@ -105,3 +106,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-2950085870214111926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2610694002186098483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dc859d15785b32469039e9fcc01b762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

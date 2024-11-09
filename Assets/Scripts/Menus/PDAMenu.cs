@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PDA : MonoBehaviour
+public class PDAMenu : MonoBehaviour
 {
     public GameObject ObjetoPDA;
     public bool pdaActive = false;

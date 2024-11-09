@@ -10,7 +10,6 @@ public class FuncionamientoPistola_mirilla : MonoBehaviour
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
     public GameObject personaje;
-
     private GameObject[] slimes;
     void Update()
     {

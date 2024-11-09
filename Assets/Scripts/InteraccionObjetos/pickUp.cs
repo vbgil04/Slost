@@ -8,10 +8,14 @@ public class pickUp : MonoBehaviour
     public Transform holdingPosition;
     private GameObject heldObject;
     private bool isHolding = false;
-
+    private Ray ray;
+    public Camera cam;
+    
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        ray = new Ray(cam.transform.position, cam.transform.forward);
+        Debug.DrawRay(ray.origin, ray.direction * pickUpRange, Color.red);
+        if (Input.GetKeyDown(KeyCode.C))
         {
             if (isHolding)
             {
@@ -26,7 +30,6 @@ public class pickUp : MonoBehaviour
 
     void TryPickUpObject()
     {
-        Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, pickUpRange)) // El out es un puntero

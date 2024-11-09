@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class RalentizacionSLime : MonoBehaviour
 {
-    private bool collisionSlimeS = false;
+    private bool collisionSlime = false;
 
     void OnControllerColliderHit(ControllerColliderHit hit) {
-        if (hit.gameObject.CompareTag("SlimeS")) {
-            collisionSlimeS = true;
+        if (hit.gameObject.CompareTag("SlimeS")||hit.gameObject.CompareTag("SlimeT")||hit.gameObject.CompareTag("SlimeP")) {
+            collisionSlime = true;
             Debug.Log("Ralentizado");
             GlobalVariables.playerSpeed = 1f;
             GlobalVariables.jumpHeight = 0.3f;
@@ -16,7 +16,7 @@ public class RalentizacionSLime : MonoBehaviour
     }
 
     void Update() {
-        if (collisionSlimeS) {
+        if (collisionSlime) {
             Debug.Log("Manteniendo ralentización");
             GlobalVariables.slime_collision = true;
         } else {
@@ -25,6 +25,6 @@ public class RalentizacionSLime : MonoBehaviour
             GlobalVariables.playerSpeed = GlobalVariables.defaultPlayerSpeed;
             GlobalVariables.jumpHeight = GlobalVariables.defaultJumpHeight;
         }
-        collisionSlimeS = false;
+        collisionSlime = false;
     }
 }

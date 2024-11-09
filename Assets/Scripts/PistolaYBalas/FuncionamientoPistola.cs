@@ -12,18 +12,13 @@ public class FuncionamientoPistola : MonoBehaviour
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
     private bool slimeFuera = false; //sliem
-
+    public GameObject municion;
     private List<GameObject> slimes;
-    // public GameObject municion;
-    
-    void Start()
-    {
-        // UpdateMunicion();
-    }
     void Update()
     {
         Shoot();
         RetornarSlime();
+        UpdateMunicion();
     }
     public void Shoot() {
         if(Input.GetMouseButtonDown(0) && !slimeFuera){
@@ -36,7 +31,6 @@ public class FuncionamientoPistola : MonoBehaviour
                 bullet.transform.rotation = bulletSpawnPoint.rotation;
                 bullet.SetActive(true);
                 bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
-                // UpdateMunicion();
             }
         } 
     }
@@ -50,7 +44,6 @@ public class FuncionamientoPistola : MonoBehaviour
            } else {
                 slimes[0].SetActive(false);
                 GlobalVariables.cantSlimes--;
-                // UpdateMunicion();
                 Debug.Log("Slime retornado");
            }
         }
@@ -61,13 +54,13 @@ public class FuncionamientoPistola : MonoBehaviour
             GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag(tag);
             objects.AddRange(taggedObjects);
         }
-        objects = objects.OrderBy(obj => obj.activeInHierarchy).ToList();
+        objects = objects.OrderBy(obj => obj.GetComponent<SlimePegado>().GetMomentoActivacion()).ToList();
         return objects;
     }
 
-    //funcion auxiliar de UI
-//     private void UpdateMunicion()
-//     {
-//         municion.GetComponent<Text>().text = (GlobalVariables.maxSlimes - GlobalVariables.cantSlimes) + " / " + (GlobalVariables.maxSlimes);
-//     }
+    // funcion auxiliar de UI
+    public void UpdateMunicion()
+    {
+        municion.GetComponent<Text>().text = (GlobalVariables.maxSlimes - GlobalVariables.cantSlimes) + " / " + (GlobalVariables.maxSlimes);
+    }
 }

@@ -193,5 +193,3 @@ public class Player_Move : MonoBehaviour
         MetodoCaida();
     }
 }
-
-
