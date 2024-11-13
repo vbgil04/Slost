@@ -35,6 +35,7 @@ public class Player_Move : MonoBehaviour
         controller.Move(move * speed * Time.deltaTime);
 
         // Salto
+        Debug.Log(GlobalVariables.slime_collision);
         if (Input.GetKeyDown(KeyCode.Space) && (isGrounded || GlobalVariables.slime_collision))
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);

@@ -9,6 +9,7 @@ TagManager:
   - SlimeT
   - SlimeP
   - cogible
+  - SlimeNoRecogible
   layers:
   - Default
   - TransparentFX
