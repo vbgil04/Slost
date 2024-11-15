@@ -12,24 +12,13 @@ public class FuncionamientoPistola : MonoBehaviour
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
     private bool slimeFuera = false; //sliem
-    private GameObject[] slimes;
-    public GameObject balaFuera;
-
-    void Awake(){
-        balaFuera.SetActive(false);
     public GameObject municion;
-    private GameObject[] slimes;
-    
-    void Start()
-    {
-        UpdateMunicion();
-    }
+    private List<GameObject> slimes;
     void Update()
     {
         Shoot();
         RetornarSlime();
-        SacarSlime();
-        GuardarSlime();
+        UpdateMunicion();
     }
     public void Shoot() {
         if(Input.GetMouseButtonDown(0) && !slimeFuera){
@@ -45,20 +34,7 @@ public class FuncionamientoPistola : MonoBehaviour
             }
         } 
     }
-    public void SacarSlime(){
-        if(Input.GetMouseButton(1) && !slimeFuera){
-            Debug.Log("Slime sacado");
-            balaFuera.SetActive(true);
-            slimeFuera = true;
-        }
-    }
-    public void GuardarSlime(){
-        if(Input.GetMouseButtonUp(1) && slimeFuera){
-            Debug.Log("Slime guardado");
-            balaFuera.SetActive(false);
-            slimeFuera = false;
-        }
-    }
+
     public void RetornarSlime(){
         if(Input.GetKeyDown(KeyCode.R)){
            slimes =  HacerListaSLimes("SlimeS", "SlimeT", "SlimeP");
