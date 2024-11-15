@@ -14,6 +14,7 @@ TagManager:
   - ParedNormal
   - SueloNormal
   - TechoNormal
+  - SlimeNoRecogible
   layers:
   - Default
   - TransparentFX

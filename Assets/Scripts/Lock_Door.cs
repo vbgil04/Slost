@@ -5,7 +5,7 @@ using UnityEngine;
 public class Lock_Door : MonoBehaviour
 {
     private bool is_lock = true;
-    public int requiredSlimes = 3; // Número de balas necesarias para abrir la puerta
+    public int requiredSlimes; // Número de balas necesarias para abrir la puerta
     private Renderer doorRenderer; // Para controlar la transparencia de la puerta
     private Collider doorCollider; // Para manejar el paso
     private int remainingSlimes;
