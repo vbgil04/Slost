@@ -16,7 +16,8 @@ public class RalentizacionSLime : MonoBehaviour
     }
 
     void Update() {
-        if (collisionSlime) {
+        Debug.Log(GlobalVariables.maxSlimes);
+        if (collisionSlimeS) {
             Debug.Log("Manteniendo ralentización");
             GlobalVariables.slime_collision = true;
         } else {

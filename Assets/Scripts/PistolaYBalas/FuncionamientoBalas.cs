@@ -35,6 +35,8 @@ public class FuncionamientoBalas : MonoBehaviour
         } else if (collision.gameObject.CompareTag("SlimeS")||collision.gameObject.CompareTag("SlimeT")||collision.gameObject.CompareTag("SlimeP")) {
             gameObject.SetActive(false);
             Debug.Log("Bala destruida");
+        } else{
+            gameObject.SetActive(false); // desactivo la bala
         }
     }
     GameObject GetSlime(String tag){
