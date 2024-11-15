@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34d41fb80e85cd47a384443535ae04a, type: 3}
   m_Name: Slime 1
   m_EditorClassIdentifier: 
-  burbujasDialogo: []
+  burbujasDialogo:
+  - "Hola me llamo Salom\xF3n\nSoy este slime que ves aqu\xED"
+  - "T\xFA c\xF3mo te llamas ?!"
