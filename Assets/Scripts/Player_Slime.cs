@@ -7,7 +7,7 @@ public class Player_Slime : MonoBehaviour
     private bool collisionSlimeS = false;
 
     void OnControllerColliderHit(ControllerColliderHit hit) {
-        if (hit.gameObject.CompareTag("SlimeS")) {
+        if (hit.gameObject.CompareTag("SlimeS") || hit.gameObject.CompareTag("SlimeNoRecogible")) {
             collisionSlimeS = true;
             Debug.Log("Ralentizado");
             GlobalVariables.playerSpeed = 1f;
@@ -16,6 +16,7 @@ public class Player_Slime : MonoBehaviour
     }
 
     void Update() {
+        Debug.Log(GlobalVariables.maxSlimes);
         if (collisionSlimeS) {
             Debug.Log("Manteniendo ralentización");
             GlobalVariables.slime_collision = true;
