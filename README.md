@@ -1,3 +1,4 @@
-# Slime_GameLab
-En la escena del slime se mueve y dispara bien, también se instancian los 
-slimes bastante bien, todavía no tienen físicas los slimes
+# Slost
+en main solo están la mecánicas sin el tutorial
+en merge para tuto están el nivel con el menú principal y la caja de dialogos
+en merge temporal está lo de arriba pero con tests, dan errores los imputs
