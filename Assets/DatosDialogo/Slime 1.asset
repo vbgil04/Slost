@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: Slime 1
   m_EditorClassIdentifier: 
   burbujasDialogo:
-  - "Hola me llamo Salom\xF3n\nSoy este slime que ves aqu\xED"
-  - "T\xFA c\xF3mo te llamas ?!"
+  - "Hola me llamo Salom\xF3n.\nAhora mismo no me puedes ver pero no\npreocupes"
+  - "Llevas mucho tiempo dormido, me sorprende que\nest\xE9s vivo. "
+  - "Para sobrevivir aqu\xED vas a necesitar una pistola."
+  - "A tu derecha, al otro lado del acantilado hay una, ayudate del slime para llegar
+    hasta ah\xED."
+  - El slime es verde, y tiene muchos usos, como escalar y ayudarte a caer con seguridad.
+  - Mucha suerte!

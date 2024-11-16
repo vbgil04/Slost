@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +5,7 @@ using UnityEngine;
 public class FuncionamientoBalas : MonoBehaviour
 {
     public float vida;
-    private float nacimiento;
+    public float nacimiento;
  
     void OnEnable() {
         nacimiento = Time.time; // guardo el tiempo de nacimiento de la bala
@@ -18,11 +17,11 @@ public class FuncionamientoBalas : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.CompareTag("SueloNormal")||collision.gameObject.CompareTag("TechoNormal")||collision.gameObject.CompareTag("ParedNormal")) {
+        if (collision.gameObject.CompareTag("Disparable")) {
             gameObject.SetActive(false); 
             Debug.Log("Bala destruida");
 
-            var slime = GetSlime(collision.gameObject.tag);
+            var slime = PoolManager.Instance.GetSlimeSuelo();
             if(slime == null ){
                 Debug.Log("Max Slimes alcanzado");
                 return;
@@ -32,22 +31,11 @@ public class FuncionamientoBalas : MonoBehaviour
             slime.transform.rotation = Quaternion.LookRotation(contact.normal);
             slime.SetActive(true);
             GlobalVariables.cantSlimes++;
-        } else if (collision.gameObject.CompareTag("SlimeS")||collision.gameObject.CompareTag("SlimeT")||collision.gameObject.CompareTag("SlimeP")) {
+        } else if (collision.gameObject.CompareTag("SlimeS")) {
             gameObject.SetActive(false);
             Debug.Log("Bala destruida");
         } else{
             gameObject.SetActive(false); // desactivo la bala
         }
     }
-    GameObject GetSlime(String tag){
-        if(tag == "SueloNormal"){
-            return PoolManager.Instance.GetSlimeSuelo();
-        } else if(tag == "TechoNormal"){
-            return PoolManager.Instance.GetSlimeTecho();
-        } else if(tag == "ParedNormal"){
-            return PoolManager.Instance.GetSlimePared();
-        }
-        return null;
-    }
-    
 }

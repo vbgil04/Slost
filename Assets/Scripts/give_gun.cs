@@ -5,7 +5,7 @@ using UnityEngine;
 public class give_gun : MonoBehaviour
 {
     // Nombre del prefab de la pistola, que debe estar en la carpeta Resources.
-    private string gunPrefabName = "SciFiGun";
+    private string gunPrefabName = "pistola";
 
     // Parámetros para la pistola.
     private Vector3 gunPosition = new Vector3(0.4925857f, -0.267f, 0.7019545f);
