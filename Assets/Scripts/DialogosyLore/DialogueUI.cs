@@ -11,9 +11,12 @@ public class DialogueUI : MonoBehaviour
     public float tiempoEntreDialogos = 1f;
 
     private TypewriterEffect typewriterEffect;
+    private ResponseHandler responseHandler;
     
     private void Start() {
         typewriterEffect = GetComponent<TypewriterEffect>();
+        responseHandler = GetComponent<ResponseHandler>();
+        
         CerrarDialogo();
         ShowDialogue(testDialogue);
     }
@@ -23,11 +26,22 @@ public class DialogueUI : MonoBehaviour
     }
 
     private IEnumerator StepThroughDialogue(ObjetoDialogo dialogueObject) {
-        foreach (string dialogue in dialogueObject.BurbujasDialogo) {
+        for (int i = 0; i < dialogueObject.BurbujasDialogo.Length; i++)
+        {
+            string dialogue = dialogueObject.BurbujasDialogo[i];
             yield return typewriterEffect.Run(dialogue, textLabel);
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0));
+
+            if(i == dialogueObject.BurbujasDialogo.Length - 1 && dialogueObject.HasResponses) {
+                break;
+            }
+
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0));    
         }
-        CerrarDialogo();
+        if(dialogueObject.HasResponses) {
+            responseHandler.ShowResponses(dialogueObject.Respuestas);
+        } else {
+            CerrarDialogo();
+        }
     }
 
     private void CerrarDialogo() {
