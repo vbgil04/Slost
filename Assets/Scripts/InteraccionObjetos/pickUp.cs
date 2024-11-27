@@ -28,7 +28,7 @@ public class pickUp : MonoBehaviour
         }
     }
 
-    void TryPickUpObject()
+    private void TryPickUpObject()
     {
         RaycastHit hit;
 
@@ -36,7 +36,9 @@ public class pickUp : MonoBehaviour
         {
             if (hit.collider.CompareTag("cogible"))
             {
+                Debug.Log("Cogiste un objeto");
                 heldObject = hit.collider.gameObject;
+                CambiarBooleano(heldObject.GetComponent<ObjetosSosteniblesInterface>().GetId());
                 heldObject.transform.position = holdingPosition.position;
                 heldObject.transform.parent = holdingPosition;
                 isHolding = true;
@@ -44,13 +46,27 @@ public class pickUp : MonoBehaviour
         }
     }
 
-    void ReleaseObject()
+    private void ReleaseObject()
     {
         if (heldObject != null)
         {
             heldObject.transform.parent = null;
+            CambiarBooleano(heldObject.GetComponent<ObjetosSosteniblesInterface>().GetId());
             isHolding = false;
             heldObject = null;
         }
     }
+
+    private void CambiarBooleano(int id){
+        switch (id)
+        {
+            case 1:
+                pickUpVariables.isPickedUpMBnv1_1 = !pickUpVariables.isPickedUpMBnv1_1;
+                break;
+            case 2:
+                pickUpVariables.isPickedUpPilanv1_1 = !pickUpVariables.isPickedUpPilanv1_1;
+                break;
+        }
+    }
+
 }

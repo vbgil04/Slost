@@ -9,7 +9,7 @@ public class RalentizacionSLime : MonoBehaviour
     void OnControllerColliderHit(ControllerColliderHit hit) {
         if (hit.gameObject.CompareTag("SlimeR")||hit.gameObject.CompareTag("SlimeNoRecogible")) {
             collisionSlime = true;
-            Debug.Log("Ralentizado");
+            // Debug.Log("Ralentizado");
             GlobalVariables.playerSpeed = 1f;
             GlobalVariables.jumpHeight = 0.3f;
         }
@@ -17,10 +17,10 @@ public class RalentizacionSLime : MonoBehaviour
 
     void Update() {
         if (collisionSlime) {
-            Debug.Log("Manteniendo ralentización");
+            // Debug.Log("Manteniendo ralentización");
             GlobalVariables.slime_collision = true;
         } else {
-            Debug.Log("Velocidad normal");
+            // Debug.Log("Velocidad normal");
             GlobalVariables.slime_collision = false;
             GlobalVariables.playerSpeed = GlobalVariables.defaultPlayerSpeed;
             GlobalVariables.jumpHeight = GlobalVariables.defaultJumpHeight;

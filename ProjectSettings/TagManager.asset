@@ -16,6 +16,9 @@ TagManager:
   - TechoNormal
   - SlimeR
   - SlimeNoRecogible
+  - Panelnv1
+  - LadoIzqCablesnv1
+  - LadoDerCablesnv1
   layers:
   - Default
   - TransparentFX
