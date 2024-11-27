@@ -22,7 +22,7 @@ public class FuncionamientoBalas : MonoBehaviour
             gameObject.SetActive(false); 
             Debug.Log("Bala destruida");
 
-            var slime = GetSlime(collision.gameObject.tag);
+            var slime = PoolManager.Instance.GetSlime();
             if(slime == null ){
                 Debug.Log("Max Slimes alcanzado");
                 return;
@@ -32,20 +32,11 @@ public class FuncionamientoBalas : MonoBehaviour
             slime.transform.rotation = Quaternion.LookRotation(contact.normal);
             slime.SetActive(true);
             GlobalVariables.cantSlimes++;
-        } else if (collision.gameObject.CompareTag("SlimeS")||collision.gameObject.CompareTag("SlimeT")||collision.gameObject.CompareTag("SlimeP")) {
+        } else if (collision.gameObject.CompareTag("SlimeR")||collision.gameObject.CompareTag("SlimeNoRecogible")) {
             gameObject.SetActive(false);
             Debug.Log("Bala destruida");
         }
     }
-    GameObject GetSlime(String tag){
-        if(tag == "SueloNormal"){
-            return PoolManager.Instance.GetSlimeSuelo();
-        } else if(tag == "TechoNormal"){
-            return PoolManager.Instance.GetSlimeTecho();
-        } else if(tag == "ParedNormal"){
-            return PoolManager.Instance.GetSlimePared();
-        }
-        return null;
-    }
+    
     
 }

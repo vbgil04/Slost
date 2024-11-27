@@ -35,7 +35,7 @@ public class FuncionamientoPistola_mirilla : MonoBehaviour
     }
     public void RetornarSlime(){
         if(Input.GetKeyDown(KeyCode.R)){
-           slimes = GameObject.FindGameObjectsWithTag("SlimeS");
+           slimes = GameObject.FindGameObjectsWithTag("SlimeR");
            if(slimes.Length == 0){
                Debug.Log("No hay slimes en la escena");
                return;

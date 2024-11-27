@@ -6,15 +6,12 @@ public class PoolManager : MonoBehaviour
 {
     public static PoolManager Instance;
     public GameObject balasPrefab;
-    public GameObject slimePrefabSuelo;
-    public GameObject slimePrefabTecho;
-    public GameObject slimePrefabPared;
+    public GameObject slimePrefab;
     private int BulletPoolSize = 20;
     private int SlimePoolSize = GlobalVariables.maxSlimes;
       public List<GameObject> bulletPool; // pool de balas
-      public List<GameObject> slimePoolSuelo; 
-      public List<GameObject> slimePoolTecho; 
-      public List<GameObject> slimePoolPared;
+      public List<GameObject> slimePool; 
+
       void Awake() {
         if (Instance == null) { 
             Instance = this;
@@ -24,9 +21,7 @@ public class PoolManager : MonoBehaviour
             return;
         } 
         bulletPool = CreatePool(balasPrefab, BulletPoolSize); // creo los pools
-        slimePoolSuelo = CreatePool(slimePrefabSuelo, SlimePoolSize);
-        slimePoolTecho = CreatePool(slimePrefabTecho, SlimePoolSize);
-        slimePoolPared = CreatePool(slimePrefabPared, SlimePoolSize);
+        slimePool = CreatePool(slimePrefab, SlimePoolSize);
     }
     List<GameObject> CreatePool(GameObject prefab, int size){ 
         var lista = new List<GameObject>(); 
@@ -45,28 +40,13 @@ public class PoolManager : MonoBehaviour
         }
         return null;
     }
-    public GameObject GetSlimeSuelo(){
-        foreach (GameObject obj in slimePoolSuelo) {
+    public GameObject GetSlime(){
+        foreach (GameObject obj in slimePool) {
             if (!obj.activeInHierarchy) {
                 return obj;
             }
         }
         return null;
     }
-    public GameObject GetSlimeTecho(){
-        foreach (GameObject obj in slimePoolTecho) {
-            if (!obj.activeInHierarchy) {
-                return obj;
-            }
-        }
-        return null;
-    }
-    public GameObject GetSlimePared(){
-        foreach (GameObject obj in slimePoolPared) {
-            if (!obj.activeInHierarchy) {
-                return obj;
-            }
-        }
-        return null;
-    }
+
 }

@@ -7,7 +7,7 @@ public class RalentizacionSLime : MonoBehaviour
     private bool collisionSlime = false;
 
     void OnControllerColliderHit(ControllerColliderHit hit) {
-        if (hit.gameObject.CompareTag("SlimeS")||hit.gameObject.CompareTag("SlimeT")||hit.gameObject.CompareTag("SlimeP")) {
+        if (hit.gameObject.CompareTag("SlimeR")||hit.gameObject.CompareTag("SlimeNoRecogible")) {
             collisionSlime = true;
             Debug.Log("Ralentizado");
             GlobalVariables.playerSpeed = 1f;
