@@ -9,6 +9,7 @@ public class LadoDerCablesnv1 : MonoBehaviour
     {
         if (other.gameObject.CompareTag("SlimeR")){
             VariablesGlobalesEventos.cableDerConectado = true;
+            Debug.Log("Cable derecho conectado");
         }
     }
 }

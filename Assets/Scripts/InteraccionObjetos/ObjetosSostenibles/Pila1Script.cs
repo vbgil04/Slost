@@ -10,10 +10,6 @@ public class Pila1Script : MonoBehaviour, ObjetosSosteniblesInterface
     {
         // Get the Rigidbody component attached to this GameObject
         rb = GetComponent<Rigidbody>();
-        // if (rb == null)
-        // {
-        //     Debug.LogError("No Rigidbody component found on this GameObject.");
-        // }
     }
     void Update()
     {
@@ -22,14 +18,20 @@ public class Pila1Script : MonoBehaviour, ObjetosSosteniblesInterface
             if (rb != null)
             {
                 rb.isKinematic = true;
-                // Debug.Log("Rigidbody deactivated.");
             }
         } else {
             if (rb != null)
             {
                 rb.isKinematic = false;
-                // Debug.Log("Rigidbody activated.");
             }
+        }
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Panelnv1"))
+        {
+            VariablesGlobalesEventos.tuberia1eraSalaActiva = true;
+            Debug.Log("Tuberia 1era sala activa");
         }
     }
     public int GetId()
