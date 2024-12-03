@@ -64,7 +64,7 @@ public class pickUp : MonoBehaviour
                 pickUpVariables.isPickedUpMBnv1_1 = !pickUpVariables.isPickedUpMBnv1_1;
                 break;
             case 2:
-                pickUpVariables.isPickedUpPilanv1_1 = !pickUpVariables.isPickedUpPilanv1_1;
+                pickUpVariables.isPickedUpPilasnv1_1 = !pickUpVariables.isPickedUpPilasnv1_1;
                 break;
         }
     }

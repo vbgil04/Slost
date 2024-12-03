@@ -42,7 +42,7 @@ public class FuncionamientoPistola_mirilla : MonoBehaviour
            } else {
                 slimes[0].SetActive(false);
                 GlobalVariables.cantSlimes--;
-                Debug.Log("Slime retornado");
+                // Debug.Log("Slime retornado");
            }
         }
     }

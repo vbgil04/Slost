@@ -5,7 +5,7 @@ using UnityEngine;
 public class PuertaBajanv1 : MonoBehaviour
 {
     void Update(){
-        if(VariablesGlobalesEventos.cableIzqConectado && VariablesGlobalesEventos.cableDerConectado && VariablesGlobalesEventos.tuberia1eraSalaActiva){
+        if(VariablesGlobalesEventos.cableIzqConectado && VariablesGlobalesEventos.cableDerConectado && VariablesGlobalesEventos.tuberia1eraSalaActiva && VariablesGlobalesEventos.jugadorDelantePuerta){
             VariablesGlobalesEventos.puertaQueBaja1salaActiva = true;
             Destroy(gameObject);
         }

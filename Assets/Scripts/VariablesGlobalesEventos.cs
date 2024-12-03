@@ -7,5 +7,20 @@ public static class VariablesGlobalesEventos {
         public static bool cableIzqConectado = false;
         public static bool cableDerConectado = false;
         public static bool tuberia1eraSalaActiva = false;
+        public static bool jugadorDelantePuerta = false;
     public static bool puertaQueBaja1salaActiva = false;
+
+
+        public static bool cableIzqConectado2 = false;
+        public static bool cableDerConectado2 = false;
+        public static bool cableIzqConectado3 = false;
+        public static bool cableDerConectado3 = false;
+        public static bool cableIzqConectado4 = false;
+        public static bool cableDerConectado4 = false;
+        public static float tiempoCable2conectado = 0;
+        public static float tiempoCable4conectado = 0;
+        public static bool panel2nv1 = false;
+        public static bool panel3nv1 = false;
+        public static bool panel4nv1 = false;
+    public static bool puertaQueBaja2salaActiva = false;
 }

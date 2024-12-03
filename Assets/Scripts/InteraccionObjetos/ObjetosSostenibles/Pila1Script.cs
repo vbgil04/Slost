@@ -13,7 +13,7 @@ public class Pila1Script : MonoBehaviour, ObjetosSosteniblesInterface
     }
     void Update()
     {
-        if (pickUpVariables.isPickedUpPilanv1_1)
+        if (pickUpVariables.isPickedUpPilasnv1_1)
         {
             if (rb != null)
             {
@@ -28,10 +28,42 @@ public class Pila1Script : MonoBehaviour, ObjetosSosteniblesInterface
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Panelnv1"))
+        if (other.gameObject.CompareTag("Panel1nv1"))
         {
             VariablesGlobalesEventos.tuberia1eraSalaActiva = true;
             Debug.Log("Tuberia 1era sala activa");
+        } else if (other.gameObject.CompareTag("Panel2nv1"))
+        {
+            VariablesGlobalesEventos.panel2nv1 = true;
+            Debug.Log("Panel 2 2da sala activa");
+        } else if (other.gameObject.CompareTag("Panel3nv1"))
+        {
+            VariablesGlobalesEventos.panel3nv1 = true;
+            Debug.Log("Panel 3 2da sala activa");
+        } else if (other.gameObject.CompareTag("Panel4nv1"))
+        {
+            VariablesGlobalesEventos.panel4nv1 = true;
+            Debug.Log("Panel 4 2da sala activa");
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Panel1nv1"))
+        {
+            VariablesGlobalesEventos.tuberia1eraSalaActiva = false;
+            Debug.Log("Tuberia 1era sala desactivada");
+        } else if (other.gameObject.CompareTag("Panel2nv1"))
+        {
+            VariablesGlobalesEventos.panel2nv1 = false;
+            Debug.Log("Panel 2 2da sala desactiva");
+        } else if (other.gameObject.CompareTag("Panel3nv1"))
+        {
+            VariablesGlobalesEventos.panel3nv1 = false;
+            Debug.Log("Panel 3 2da sala desactiva");
+        } else if (other.gameObject.CompareTag("Panel4nv1"))
+        {
+            VariablesGlobalesEventos.panel4nv1 = false;
+            Debug.Log("Panel 4 2da sala desactiva");
         }
     }
     public int GetId()

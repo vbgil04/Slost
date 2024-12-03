@@ -20,11 +20,11 @@ public class FuncionamientoBalas : MonoBehaviour
     void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("SueloNormal")||collision.gameObject.CompareTag("TechoNormal")||collision.gameObject.CompareTag("ParedNormal")) {
             gameObject.SetActive(false); 
-            Debug.Log("Bala destruida");
+            // Debug.Log("Bala destruida");
 
             var slime = PoolManager.Instance.GetSlime();
             if(slime == null ){
-                Debug.Log("Max Slimes alcanzado");
+                // Debug.Log("Max Slimes alcanzado");
                 return;
             } 
             ContactPoint contact = collision.GetContact(0);
@@ -34,7 +34,7 @@ public class FuncionamientoBalas : MonoBehaviour
             GlobalVariables.cantSlimes++;
         } else if (collision.gameObject.CompareTag("SlimeR")||collision.gameObject.CompareTag("SlimeNoRecogible")) {
             gameObject.SetActive(false);
-            Debug.Log("Bala destruida");
+            // Debug.Log("Bala destruida");
         }
     }
     

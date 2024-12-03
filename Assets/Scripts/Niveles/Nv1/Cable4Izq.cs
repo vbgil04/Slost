@@ -1,23 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class LadoDerCablesnv1 : MonoBehaviour
+public class Cable4Izq : MonoBehaviour
 {
     private GameObject slime;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("SlimeR")){
             slime = other.gameObject;
-            VariablesGlobalesEventos.cableDerConectado = true;
-            Debug.Log("Cable derecho conectado");
+            VariablesGlobalesEventos.cableIzqConectado4 = true;
+            Debug.Log("Cable izquierdo 4 conectado");
         }
     }
-    private void Update(){
+    
+    private void Update() {
         if (slime != null && !slime.activeInHierarchy){
-            VariablesGlobalesEventos.cableDerConectado = false;
-            Debug.Log("Cable derecho desconectado");
+            VariablesGlobalesEventos.cableIzqConectado4 = false;
+            Debug.Log("Cable izquierdo 4 desconectado");
             slime = null;
         }
     }
