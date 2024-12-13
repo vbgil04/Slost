@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface ObjetosSosteniblesInterface
+public interface ObjetosInteractivosInterface 
 {
-    int GetId();
+    void ActivarObjeto();
 }

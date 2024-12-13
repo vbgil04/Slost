@@ -27,7 +27,7 @@ public class Selected : MonoBehaviour
             if(hit.collider.tag == "Objeto Interactivo")
             {
                 if(Input.GetKeyDown(KeyCode.E)){
-                    hit.collider.transform.GetComponent<ObjetoInteractivo>().ActivarObjeto();
+                    hit.collider.transform.GetComponent<ObjetosInteractivosInterface>().ActivarObjeto();
                 }
             }
         }
