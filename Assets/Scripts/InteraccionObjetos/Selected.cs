@@ -8,6 +8,7 @@ public class Selected : MonoBehaviour
     public float distancia = 1.5f;
     public GameObject TextDetect;
     GameObject ultimoReconocido = null;
+    public Material mat;
 
     void Start()
     {
@@ -46,7 +47,8 @@ public class Selected : MonoBehaviour
     {
         if(ultimoReconocido)
         {
-            ultimoReconocido.GetComponent<Renderer>().material.color = Color.white;
+            //change back the material
+            ultimoReconocido.GetComponent<MeshRenderer>().material = mat;
             ultimoReconocido = null;
         }
     }

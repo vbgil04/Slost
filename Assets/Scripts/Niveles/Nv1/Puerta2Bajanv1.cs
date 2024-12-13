@@ -9,8 +9,8 @@ public class Puerta2Bajanv1 : MonoBehaviour
             && VariablesGlobalesEventos.panel4nv1 && VariablesGlobalesEventos.cableDerConectado4 && VariablesGlobalesEventos.cableIzqConectado4 
             && (VariablesGlobalesEventos.tiempoCable4conectado<VariablesGlobalesEventos.tiempoCable2conectado ) 
             && VariablesGlobalesEventos.tiempoCable2conectado!=0 && VariablesGlobalesEventos.tiempoCable4conectado!=0 
-            && VariablesGlobalesEventos.jugadorDelantePuerta
-            && !VariablesGlobalesEventos.cableIzqConectado3 && !VariablesGlobalesEventos.cableDerConectado3){
+            && VariablesGlobalesEventos.jugadorDelantePuerta2
+            && !(VariablesGlobalesEventos.cableIzqConectado3 && VariablesGlobalesEventos.cableDerConectado3 && VariablesGlobalesEventos.panel3nv1)){
             VariablesGlobalesEventos.puertaQueBaja2salaActiva = true;
             Destroy(gameObject);
         }
