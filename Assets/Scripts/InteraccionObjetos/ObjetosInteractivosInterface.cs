@@ -5,4 +5,5 @@ using UnityEngine;
 public interface ObjetosInteractivosInterface 
 {
     void ActivarObjeto();
+    Material GetMaterial();
 }

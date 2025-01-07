@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class VariablesGlobalesEventos {
     //Nivel 1 (electricidad y mover objetos)
+        public static int contSalomon = 0;
         public static bool cableIzqConectado = false;
         public static bool cableDerConectado = false;
         public static bool tuberia1eraSalaActiva = false;

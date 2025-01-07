@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34d41fb80e85cd47a384443535ae04a, type: 3}
   m_Name: Tienes dudas
   m_EditorClassIdentifier: 
-  burbujasDialogo: []
-  respuestas: []
+  burbujasDialogo:
+  - "\xBFQu\xE9 te pasa?"
+  respuestas:
+  - responseText: "No se qu\xE9 hacer."
+    dialogueObject: {fileID: 11400000, guid: be63b90289563df40bac515b872eaa6a, type: 2}

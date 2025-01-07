@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34d41fb80e85cd47a384443535ae04a, type: 3}
+  m_Name: Mmm... No se
+  m_EditorClassIdentifier: 
+  burbujasDialogo:
+  - "Umm... No lo se muy bien, esos cables obviamente necesitan bater\xEDas pero
+    estoy bastante seguro de que no tienes que conectarlos todos."
+  - Solo dos de los cables estaban realmente conectados a la puerta, el otro la bloqueaba.
+  - "Adem\xE1s de que hay que conectarlos en cierto orden, si no no se abrir\xE1."
+  - "M\xE1s all\xE1 de eso no recuerdo."
+  respuestas:
+  - responseText: "Fant\xE1stico, \xBFentonces?"
+    dialogueObject: {fileID: 11400000, guid: 35efa937f624fa1458555c454c81cc5d, type: 2}

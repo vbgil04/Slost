@@ -48,7 +48,7 @@ public class Selected : MonoBehaviour
         if(ultimoReconocido)
         {
             //change back the material
-            ultimoReconocido.GetComponent<MeshRenderer>().material = mat;
+            ultimoReconocido.GetComponent<MeshRenderer>().material = ultimoReconocido.GetComponent<ObjetosInteractivosInterface>().GetMaterial();
             ultimoReconocido = null;
         }
     }

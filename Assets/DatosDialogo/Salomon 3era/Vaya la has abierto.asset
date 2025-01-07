@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34d41fb80e85cd47a384443535ae04a, type: 3}
+  m_Name: Vaya la has abierto
+  m_EditorClassIdentifier: 
+  burbujasDialogo:
+  - 'Vaya, la has abierto. '
+  respuestas:
+  - responseText: "\xBFSorprendido?"
+    dialogueObject: {fileID: 11400000, guid: 0477b2809e9fec54681f1c98570e0d7e, type: 2}

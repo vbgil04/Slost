@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ZonaDentro.unity
+    guid: fa8b7f8d33252684daf7a31a3305d11c
   m_configObjects: {}
