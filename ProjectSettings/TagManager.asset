@@ -22,6 +22,7 @@ TagManager:
   - Panel2nv1
   - Panel3nv1
   - Panel4nv1
+  - palanca
   layers:
   - Default
   - TransparentFX

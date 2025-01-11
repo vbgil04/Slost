@@ -25,4 +25,9 @@ public static class VariablesGlobalesEventos {
         public static bool panel4nv1 = false;
         public static bool jugadorDelantePuerta2 = false;
     public static bool puertaQueBaja2salaActiva = false;
+
+
+    // Nivel 2
+    public static bool reparar1 = false;
+    public static bool puertaQueBaja1salaActivaNv2 = false;
 }

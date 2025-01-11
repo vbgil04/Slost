@@ -34,7 +34,7 @@ public class pickUp : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, pickUpRange)) // El out es un puntero
         {
-            if (hit.collider.CompareTag("cogible"))
+            if (hit.collider.CompareTag("cogible")||hit.collider.CompareTag("palanca"))
             {
                 Debug.Log("Cogiste un objeto");
                 heldObject = hit.collider.gameObject;
@@ -65,6 +65,9 @@ public class pickUp : MonoBehaviour
                 break;
             case 2:
                 pickUpVariables.isPickedUpPilasnv1_1 = !pickUpVariables.isPickedUpPilasnv1_1;
+                break;
+            case 3:
+                pickUpVariables.isPickedUpPalancnv2_1 = !pickUpVariables.isPickedUpPalancnv2_1;
                 break;
         }
     }
