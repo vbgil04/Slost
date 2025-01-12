@@ -23,6 +23,7 @@ TagManager:
   - Panel3nv1
   - Panel4nv1
   - palanca
+  - escombros
   layers:
   - Default
   - TransparentFX

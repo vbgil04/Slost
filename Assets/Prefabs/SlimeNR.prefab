@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3386073882331901418
+--- !u!1001 &186927243398512203
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,27 +10,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 042c9d113672b044a841f5cec06fab43, type: 3}
       propertyPath: m_LocalScale.x
-      value: 50
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 042c9d113672b044a841f5cec06fab43, type: 3}
       propertyPath: m_LocalScale.y
-      value: 50
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 042c9d113672b044a841f5cec06fab43, type: 3}
       propertyPath: m_LocalScale.z
-      value: 50
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 042c9d113672b044a841f5cec06fab43, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.718916
+      value: -9.928999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 042c9d113672b044a841f5cec06fab43, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.702
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 042c9d113672b044a841f5cec06fab43, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -38.86922
+      value: -50.907375
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 042c9d113672b044a841f5cec06fab43, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a0f6b92405934d14cb5e1e9855b0b3b9, type: 2}
     - target: {fileID: 919132149155446097, guid: 042c9d113672b044a841f5cec06fab43, type: 3}
       propertyPath: m_Name
-      value: Slime
+      value: SlimeNR
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 042c9d113672b044a841f5cec06fab43, type: 3}
       propertyPath: m_Layer
@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 042c9d113672b044a841f5cec06fab43, type: 3}
       propertyPath: m_TagString
-      value: SlimeR
+      value: SlimeNoRecogible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -82,23 +82,23 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 042c9d113672b044a841f5cec06fab43, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4944393162508303746}
+      addedObject: {fileID: 2145967059845334234}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 042c9d113672b044a841f5cec06fab43, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -3134840860070951687}
+      addedObject: {fileID: 2008372981033639492}
   m_SourcePrefab: {fileID: 100100000, guid: 042c9d113672b044a841f5cec06fab43, type: 3}
---- !u!1 &2467033134509838523 stripped
+--- !u!1 &1033981316754916122 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 042c9d113672b044a841f5cec06fab43, type: 3}
-  m_PrefabInstance: {fileID: 3386073882331901418}
+  m_PrefabInstance: {fileID: 186927243398512203}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &4944393162508303746
+--- !u!65 &2145967059845334234
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2467033134509838523}
+  m_GameObject: {fileID: 1033981316754916122}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -111,15 +111,15 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.024347186, y: 0.024964537, z: 0.005652107}
-  m_Center: {x: 0.00032678488, y: 0.0005914032, z: -0.00016889557}
---- !u!114 &-3134840860070951687
+  m_Size: {x: 0.017001322, y: 0.020327678, z: 0.0045074807}
+  m_Center: {x: 0.000024273997, y: 0.000080828664, z: -0.0007412078}
+--- !u!114 &2008372981033639492
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2467033134509838523}
+  m_GameObject: {fileID: 1033981316754916122}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1dc859d15785b32469039e9fcc01b762, type: 3}
