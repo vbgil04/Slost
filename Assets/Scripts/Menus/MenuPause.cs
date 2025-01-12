@@ -18,7 +18,7 @@ public class Pausa : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)){ // si se presiona la tecla E
+        if (Input.GetKeyDown(KeyCode.Tab)){ // si se presiona la tecla E
             if (pausado){ // si el juego está pausado lo reanudo, si no lo pauso
                 Reanudar();
             } else {
