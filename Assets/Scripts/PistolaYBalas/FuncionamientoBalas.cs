@@ -18,7 +18,7 @@ public class FuncionamientoBalas : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.CompareTag("SueloNormal")||collision.gameObject.CompareTag("TechoNormal")||collision.gameObject.CompareTag("ParedNormal")) {
+        if (collision.gameObject.CompareTag("SueloNormal")||collision.gameObject.CompareTag("TechoNormal")||collision.gameObject.CompareTag("ParedNormal")||collision.gameObject.CompareTag("escombros")) {
             gameObject.SetActive(false); 
             // Debug.Log("Bala destruida");
 
@@ -30,9 +30,16 @@ public class FuncionamientoBalas : MonoBehaviour
             ContactPoint contact = collision.GetContact(0);
             slime.transform.position = contact.point;
             slime.transform.rotation = Quaternion.LookRotation(contact.normal);
+            if (collision.gameObject.CompareTag("SueloNormal")){
+                slime.transform.position += new Vector3(0, 0.07f, 0);
+            } else if (collision.gameObject.CompareTag("TechoNormal")){
+                slime.transform.position += new Vector3(0, -0.07f, 0);
+            } else if (collision.gameObject.CompareTag("ParedNormal")){
+                slime.transform.position += contact.normal * 0.07f;
+            }
             slime.SetActive(true);
             GlobalVariables.cantSlimes++;
-        } else if (collision.gameObject.CompareTag("SlimeR")||collision.gameObject.CompareTag("SlimeNoRecogible")) {
+        } else if (collision.gameObject.CompareTag("SlimeR")||collision.gameObject.CompareTag("SlimeNoRecogible")||collision.gameObject.CompareTag("Untagged")) {
             gameObject.SetActive(false);
             // Debug.Log("Bala destruida");
         }

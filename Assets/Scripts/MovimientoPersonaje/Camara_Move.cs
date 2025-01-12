@@ -8,6 +8,8 @@ public class Camara_Move : MonoBehaviour
     public Transform playerBody;
     private float rotation = 0f;
 
+    
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -15,6 +17,7 @@ public class Camara_Move : MonoBehaviour
 
     void Update()
     {
+        
         // Obtener la entrada del ratón
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
