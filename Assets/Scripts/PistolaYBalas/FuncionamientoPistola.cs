@@ -9,7 +9,7 @@ using System.Linq;
 public class FuncionamientoPistola : MonoBehaviour
 {
     public Transform bulletSpawnPoint;
-    public float bulletSpeed = 10;
+    public float bulletSpeed = 15;
     private bool slimeFuera = false; //sliem
     public GameObject municion;
     private List<GameObject> slimes;
