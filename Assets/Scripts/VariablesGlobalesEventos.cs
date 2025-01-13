@@ -29,5 +29,7 @@ public static class VariablesGlobalesEventos {
 
     // Nivel 2
     public static bool reparar1 = false;
+    public static bool reparar2 = false;
     public static bool puertaQueBaja1salaActivaNv2 = false;
+    public static bool puertaQueBaja2salaActivaNv2 = false;
 }
