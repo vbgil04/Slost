@@ -7,6 +7,7 @@ public class CollPuertaActivar : MonoBehaviour
     void OnTriggerEnter(Collider other){
         if(other.gameObject.CompareTag("Player")){
             VariablesGlobalesEventos.jugadorDelantePuerta = true;
+            Debug.Log("jugador delante puerta");
         }
     }
     void OnTriggerExit(Collider other){

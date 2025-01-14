@@ -39,7 +39,7 @@ public class Selected : MonoBehaviour
 
     void SelectedObject(Transform transform)
     {
-        transform.GetComponent<MeshRenderer>().material.color = Color.green;
+        // transform.GetComponent<MeshRenderer>().material.color = Color.green;
         ultimoReconocido = transform.gameObject;
     }
 
@@ -48,7 +48,7 @@ public class Selected : MonoBehaviour
         if(ultimoReconocido)
         {
             //change back the material
-            ultimoReconocido.GetComponent<MeshRenderer>().material = ultimoReconocido.GetComponent<ObjetosInteractivosInterface>().GetMaterial();
+            // ultimoReconocido.GetComponent<MeshRenderer>().material = ultimoReconocido.GetComponent<ObjetosInteractivosInterface>().GetMaterial();
             ultimoReconocido = null;
         }
     }
