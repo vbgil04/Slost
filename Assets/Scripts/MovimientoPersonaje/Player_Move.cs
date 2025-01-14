@@ -177,6 +177,7 @@ public class Player_Move : MonoBehaviour
     }
 
     void muerte(){
+        GlobalVariables.maxSlimes = 3;
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
     void Update()
@@ -212,10 +213,15 @@ public class Player_Move : MonoBehaviour
         //caida
         MetodoCaida();
 
-        if (Time.time > (tiemporeg+5) && HP < maxHP)
+        if (Time.time > (tiemporeg+5))
         {
             tiemporeg = Time.time;
-            HP+=5;
+            if (HP < maxHP){
+                HP+=5;
+                if (HP>maxHP){
+                    HP = maxHP;
+                }
+            }
         }
 
         if(HP <= 20 && HP >= 15){

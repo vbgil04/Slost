@@ -14,5 +14,6 @@ public class cofres1 : MonoBehaviour, ObjetosInteractivosInterface
     {
         GlobalVariables.maxSlimes +=1;
         pared.SetActive(false);
+        this.enabled = false;
     }
 }
