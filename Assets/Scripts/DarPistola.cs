@@ -7,6 +7,7 @@ public class DarPistola : MonoBehaviour
     public GameObject pistola;
     public GameObject prop;
     public GameObject canvasmira;
+    public GameObject puerta;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,6 +16,7 @@ public class DarPistola : MonoBehaviour
             pistola.SetActive(true);
             prop.SetActive(false);
             canvasmira.SetActive(true);
+            puerta.tag = "Objeto Interactivo";
             Destroy(gameObject);
         }
     }

@@ -24,6 +24,7 @@ TagManager:
   - Panel4nv1
   - palanca
   - escombros
+  - fueramapa
   layers:
   - Default
   - TransparentFX

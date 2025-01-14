@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player_Move : MonoBehaviour
@@ -43,6 +44,10 @@ public class Player_Move : MonoBehaviour
     Vector3 velocidadVertical;
     Vector2 alturaInicialYFinal;
 
+    float tiemporeg;
+
+    public GameObject canvasMuerte; private CanvasGroup canvasGroup;
+
     private void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -51,8 +56,19 @@ public class Player_Move : MonoBehaviour
         alturaActualA = transform.position.y;
         alturaActualB= transform.position.y;
         alturaActualC= transform.position.y;
+        tiemporeg = Time.time;
+        canvasGroup = canvasMuerte.GetComponent<CanvasGroup>();
     }
 
+    public void matarPorCaida()
+    {
+        StartCoroutine(matarCaida());
+    }
+    private IEnumerator matarCaida()
+    {
+        yield return new WaitForSeconds(5);
+        muerte();
+    }
     public void MetodoCaida() {
         tiempoParaRevisarCaida += Time.deltaTime;
         if(tiempoParaRevisarCaida >= tiempoActualizacion)
@@ -159,6 +175,10 @@ public class Player_Move : MonoBehaviour
             velocidadVertical.y = 0f;
         }
     }
+
+    void muerte(){
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    }
     void Update()
     {
         // Comprueba si el personaje está en el suelo y/o en slime
@@ -191,5 +211,26 @@ public class Player_Move : MonoBehaviour
 
         //caida
         MetodoCaida();
+
+        if (Time.time > (tiemporeg+5) && HP < maxHP)
+        {
+            tiemporeg = Time.time;
+            HP+=5;
+        }
+
+        if(HP <= 20 && HP >= 15){
+            canvasGroup.alpha = 0.5f;
+        } else if (HP < 15 && HP >= 10){
+            canvasGroup.alpha = 0.7f;
+        } else if (HP < 10 && HP >= 5){
+            canvasGroup.alpha = 0.9f;
+        } else if (HP < 5 && HP > 0){
+            canvasGroup.alpha = 1f;
+        } else if (HP <= 0){
+            canvasGroup.alpha = 1f;
+            muerte();
+        } else {
+            canvasGroup.alpha = 0f;
+        }
     }
 }
