@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34d41fb80e85cd47a384443535ae04a, type: 3}
+  m_Name: Inicio5 1
+  m_EditorClassIdentifier: 
+  burbujasDialogo:
+  - "\xBFVes las dos puertas que hay en esta sala?"
+  - "Son las que te pueden sacar de aqu\xED, pero ambas tienen un bloqueo."
+  - "Para la puerta que est\xE1 de este lado necesitas 4 balas."
+  - "Para la puerta que est\xE1 junto a los contenedores rojos necesitas 5  balas."
+  respuestas:
+  - responseText: "Vale... \xBFC\xF3mo las consigo?"
+    dialogueObject: {fileID: 11400000, guid: ade63fe71a835b242a902f6e10cce0d9, type: 2}

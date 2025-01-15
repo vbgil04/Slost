@@ -8,7 +8,6 @@ public class Cinematica : MonoBehaviour
     public GameObject[] images;
     public float waitTime = 5f;
     private int currentImage = 0;
-    private bool isRunning = false;
     
     void Start()
     {

@@ -25,6 +25,7 @@ TagManager:
   - palanca
   - escombros
   - fueramapa
+  - silavandano
   layers:
   - Default
   - TransparentFX

@@ -47,7 +47,7 @@ public class Pausa : MonoBehaviour
     }
     public void Reload(){
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         panelPausa.SetActive(false); // desactivo el panel de pausa
     }
 }

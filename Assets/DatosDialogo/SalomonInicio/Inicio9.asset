@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34d41fb80e85cd47a384443535ae04a, type: 3}
+  m_Name: Inicio9
+  m_EditorClassIdentifier: 
+  burbujasDialogo:
+  - "No es as\xED, el slime que disparas tiene la capacidad de moverse, puede regresar
+    a tu pistola."
+  - "Adem\xE1s de que sus c\xE9lulas son distintas, por lo que tiene otras propiedades
+    que le permiten estar"
+  - sin problema dentro de la pistola.
+  respuestas:
+  - responseText: "\xBFC\xC9LULAS? \xBFEST\xC1 VIVO?"
+    dialogueObject: {fileID: 11400000, guid: 950a982fa1cf8364aa42d125c5d7b2c2, type: 2}

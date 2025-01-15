@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class cofres : MonoBehaviour, ObjetosInteractivosInterface
 {
+    public GameObject animacionDeCofre;
+    private Animator animator;
+    void Start()
+    {
+        animator = animacionDeCofre.GetComponent<Animator>();
+    }
     public Material GetMaterial()
     {
         return null;
@@ -11,7 +17,11 @@ public class cofres : MonoBehaviour, ObjetosInteractivosInterface
 
     public void ActivarObjeto()
     {
-        GlobalVariables.maxSlimes +=1;
-        this.enabled = false;
+        if (VariablesGlobalesEventos.cf1){
+            GlobalVariables.maxSlimes +=1;
+            VariablesGlobalesEventos.cf1 = false;
+
+        }
+        
     }
 }

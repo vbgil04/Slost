@@ -44,9 +44,11 @@ public class Player_Move : MonoBehaviour
     Vector3 velocidadVertical;
     Vector2 alturaInicialYFinal;
 
-    float tiemporeg;
+    float tiemporeg, tiemposil;
 
     public GameObject canvasMuerte; private CanvasGroup canvasGroup;
+
+    public bool silavan = false;
 
     private void Start()
     {
@@ -57,6 +59,7 @@ public class Player_Move : MonoBehaviour
         alturaActualB= transform.position.y;
         alturaActualC= transform.position.y;
         tiemporeg = Time.time;
+        tiemposil = Time.time;
         canvasGroup = canvasMuerte.GetComponent<CanvasGroup>();
     }
 
@@ -216,15 +219,29 @@ public class Player_Move : MonoBehaviour
         if (Time.time > (tiemporeg+5))
         {
             tiemporeg = Time.time;
-            if (HP < maxHP){
+            if (!silavan && (HP < maxHP)){
                 HP+=5;
                 if (HP>maxHP){
                     HP = maxHP;
                 }
             }
         }
+        if (Time.time > (tiemposil+2))
+        {
+            tiemposil = Time.time;
+            if (silavan){
+                HP-=4;
+                if (HP<=0){
+                    HP = 0;
+                }
+            }
+        }
 
-        if(HP <= 20 && HP >= 15){
+        if (HP <30 && HP > 25){
+            canvasGroup.alpha=0.2f;
+        } else if (HP <= 25 && HP > 20){
+            canvasGroup.alpha=0.35f;
+        } else if(HP <= 20 && HP >= 15){
             canvasGroup.alpha = 0.5f;
         } else if (HP < 15 && HP >= 10){
             canvasGroup.alpha = 0.7f;

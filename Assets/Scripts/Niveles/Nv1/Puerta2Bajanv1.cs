@@ -12,6 +12,7 @@ public class Puerta2Bajanv1 : MonoBehaviour
             && VariablesGlobalesEventos.jugadorDelantePuerta2
             && !(VariablesGlobalesEventos.cableIzqConectado3 && VariablesGlobalesEventos.cableDerConectado3 && VariablesGlobalesEventos.panel3nv1)){
             VariablesGlobalesEventos.puertaQueBaja2salaActiva = true;
+            VariablesGlobalesEventos.contSalomon = 0;
             Destroy(gameObject);
         }
     }

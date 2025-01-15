@@ -12,8 +12,10 @@ public class cofres1 : MonoBehaviour, ObjetosInteractivosInterface
 
     public void ActivarObjeto()
     {
-        GlobalVariables.maxSlimes +=1;
-        pared.SetActive(false);
-        this.enabled = false;
+        if (VariablesGlobalesEventos.cf2){
+            GlobalVariables.maxSlimes +=1;
+            VariablesGlobalesEventos.cf2 = false;
+            pared.SetActive(false);
+        }
     }
 }

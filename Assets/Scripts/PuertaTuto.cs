@@ -8,6 +8,7 @@ public class PuertaTuto : MonoBehaviour, ObjetosInteractivosInterface
 	public void ActivarObjeto()
 	{
 		//load scene zona dentro
+		GlobalVariables.cantSlimes = 3;
         SceneManager.LoadScene("zonaDentro");
 	}
 
