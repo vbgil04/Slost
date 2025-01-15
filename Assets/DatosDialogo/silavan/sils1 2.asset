@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34d41fb80e85cd47a384443535ae04a, type: 3}
+  m_Name: sils1 2
+  m_EditorClassIdentifier: 
+  burbujasDialogo:
+  - "\xA1\xA1\xA1FUERA!!! F\u0336\u030C\u031A\u0344\u035D\u030D\u0349\u0328\u0320U\u0337\u0300\u035D\u0344\u031A\u0307\u030E\u030F\u0358\u0351\u0350\u032E\u0353\u0339\u035C\u0359\u0355\u032D\u0348E\u0336\u0340\u0312\u0325\u0327R\u0338\u0315\u0313\u0305\u033C\u0330\u0355\u0355\u0324\u0347\u0331\u0317\u0349A\u0335\u030C\u032D\u031D\u0329\u0333\u031C\u0316"
+  respuestas:
+  - responseText: "\xA1\xA1PERO ESPERA!! \xA1\xA1AHH QU\xC9 ES ESE SONIDO!!"
+    dialogueObject: {fileID: 11400000, guid: 6d7beb7c8e057564ea3b0c4bd08ac95f, type: 2}

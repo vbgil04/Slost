@@ -6,7 +6,11 @@ public static class VariablesGlobalesEventos {
     //Nivel 1 (electricidad y mover objetos)
 
         public static int contSalomon1 = 0;
+        public static int contSalomon2 = 0;
         public static int contSalomon = 0;
+        public static int contSilS1 = 0;
+        public static int contSal1 = 0;
+        public static bool CuadernoNotas1 = false;
         public static bool cableIzqConectado = false;
         public static bool cableDerConectado = false;
         public static bool tuberia1eraSalaActiva = false;
@@ -29,8 +33,8 @@ public static class VariablesGlobalesEventos {
     public static bool puertaQueBaja2salaActiva = false;
 
     //(cofres)
-    public static bool cf1 = true;
-    public static bool cf2 = true;
+    public static bool cf1 = false;
+    public static bool cf2 = false;
 
 
     // Nivel 2

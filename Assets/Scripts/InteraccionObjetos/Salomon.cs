@@ -13,6 +13,7 @@ public class Salomon : MonoBehaviour, ObjetosInteractivosInterface
     [SerializeField] private ObjetoDialogo dialogo5;
     [SerializeField] private ObjetoDialogo dialogo6;
     [SerializeField] private ObjetoDialogo dialogo7;
+    [SerializeField] private ObjetoDialogo tresPuntos;
     
     public Material m;
     private bool aux = true;
@@ -34,7 +35,7 @@ public class Salomon : MonoBehaviour, ObjetosInteractivosInterface
     public void ActivarObjeto()
     {
         VariablesGlobalesEventos.contSalomon  += 1;
-        if (VariablesGlobalesEventos.contSalomon1  == 0)
+        if (!VariablesGlobalesEventos.cf1 && VariablesGlobalesEventos.contSalomon1  == 0)
         {
             cajaDialogo.GetComponent<DialogueUI>().ShowDialogue(dialogo);
             VariablesGlobalesEventos.contSalomon1  += 1;
@@ -60,8 +61,9 @@ public class Salomon : MonoBehaviour, ObjetosInteractivosInterface
             cajaDialogo.GetComponent<DialogueUI>().ShowDialogue(dialogo6);
             cofre.tag  = "Objeto Interactivo";
         } else if (VariablesGlobalesEventos.cf1) {
-           
             cajaDialogo.GetComponent<DialogueUI>().ShowDialogue(dialogo7);
+        } else {
+            cajaDialogo.GetComponent<DialogueUI>().ShowDialogue(tresPuntos);
         }
     }
 

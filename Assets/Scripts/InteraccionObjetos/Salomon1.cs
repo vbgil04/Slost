@@ -11,10 +11,9 @@ public class Salomon1 : MonoBehaviour, ObjetosInteractivosInterface
     [SerializeField] private ObjetoDialogo dialogo4;
     [SerializeField] private ObjetoDialogo dialogo5;
     [SerializeField] private ObjetoDialogo dialogo6;
+    [SerializeField] private ObjetoDialogo treptos;
     
     public Material m;
-    private bool aux = true;
-    private bool aux2 = true;
     void Update()
     {
 
@@ -22,7 +21,7 @@ public class Salomon1 : MonoBehaviour, ObjetosInteractivosInterface
     public void ActivarObjeto()
     {
         VariablesGlobalesEventos.contSalomon1  += 1;
-        if (VariablesGlobalesEventos.contSalomon1  == 1)
+        if (!VariablesGlobalesEventos.cf1 && !VariablesGlobalesEventos.cf2 && VariablesGlobalesEventos.contSalomon1  == 1)
         {
             cajaDialogo.GetComponent<DialogueUI>().ShowDialogue(dialogo);
         }
@@ -30,7 +29,23 @@ public class Salomon1 : MonoBehaviour, ObjetosInteractivosInterface
         {
             cajaDialogo.GetComponent<DialogueUI>().ShowDialogue(dialogo2);
         } 
-        
+        else if (VariablesGlobalesEventos.cf1 && !VariablesGlobalesEventos.cf2 && VariablesGlobalesEventos.contSalomon1 ==1)
+        {
+            cajaDialogo.GetComponent<DialogueUI>().ShowDialogue(dialogo3);
+        } 
+        else if (VariablesGlobalesEventos.cf1 && !VariablesGlobalesEventos.cf2 && VariablesGlobalesEventos.contSalomon1 >=1)
+        {
+            cajaDialogo.GetComponent<DialogueUI>().ShowDialogue(dialogo4);
+        } 
+        else if (!VariablesGlobalesEventos.cf1 && VariablesGlobalesEventos.cf2){
+            cajaDialogo.GetComponent<DialogueUI>().ShowDialogue(dialogo5);
+        } 
+        else if (VariablesGlobalesEventos.cf1 && VariablesGlobalesEventos.cf2){
+            cajaDialogo.GetComponent<DialogueUI>().ShowDialogue(dialogo6);
+        }
+        else {
+            cajaDialogo.GetComponent<DialogueUI>().ShowDialogue(treptos);
+        }
     }
 
     public Material GetMaterial()

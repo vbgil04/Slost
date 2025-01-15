@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34d41fb80e85cd47a384443535ae04a, type: 3}
+  m_Name: msj emerio 1
+  m_EditorClassIdentifier: 
+  burbujasDialogo:
+  - 'Para Dorian:'
+  - "Deber\xEDas haberme dicho que para fragmentar a un slime necesitabas torturarlo
+    f\xEDsica y emocionalmente."
+  - "Muchas cosas se explican por eso, sobre todo el resentimiento de S\xEDlavan."
+  - "\xBFQue pierdan parte de su memoria al fragmentarse te era conveniente, no?"
+  - "Ahora me siento como un imb\xE9cil, \xBFpor qu\xE9 no me lo dijiste? "
+  - "\xBFPor qu\xE9 no me dijiste que la fragmentaci\xF3n generaba tanta energ\xEDa?"
+  - "Cuando te descubri\xF3 Liara y lo comunic\xF3 te vi estresado y nervioso por
+    primera vez."
+  - "Siempre hab\xEDa sido demasiado pasota, y cuando te empezaron a alabar por tu
+    gran descubrimiento,"
+  - "que ha salvado a la humanidad de la crisis energ\xE9tica,"
+  - empezaste a sentir remordimiento.
+  - "No te entiendo. Despu\xE9s de todosolo quedo yo sinti\xE9ndome como un imb\xE9cil
+    ignorante por no haberme dado cuenta."
+  - Sobre todo porque le estoy escribiendo a un muerto Supongo que lo hago para desahogarme.
+  - "Hoy mismo te han ejecutado envi\xE1ndote a la nada. Al vac\xEDo del espacio.
+    Dicen que no durar\xE1s m\xE1s de 6h."
+  - "Esta dise\xF1ada as\xED la c\xE1psula de ejecuci\xF3n, asi que en verdad todav\xEDa
+    podr\xEDas seguir vivo."
+  - ".....Te echo de menos. Ojal\xE1 todav\xEDa estuvieses aqu\xED, no se que hacer
+    frente a la tortura a la que est\xE1n someti\xE9ndolos."
+  - -- Emerio, 29/02/2145
+  respuestas: []

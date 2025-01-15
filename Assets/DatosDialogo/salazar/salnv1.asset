@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34d41fb80e85cd47a384443535ae04a, type: 3}
+  m_Name: salnv1
+  m_EditorClassIdentifier: 
+  burbujasDialogo:
+  - "\xBFEst\xE1 S\xEDlavan... au...  por ah\xED? ahh... \xBFMe ve?"
+  respuestas:
+  - responseText: "Eh, si... \xBFEst\xE1s bien?"
+    dialogueObject: {fileID: 11400000, guid: ed44aa23da40b3e489c7be4f20e7c8a4, type: 2}

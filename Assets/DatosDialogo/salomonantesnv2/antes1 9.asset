@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34d41fb80e85cd47a384443535ae04a, type: 3}
+  m_Name: antes1 9
+  m_EditorClassIdentifier: 
+  burbujasDialogo:
+  - "\xA1QU\xC9 HACES AQU\xCD! \xA1SILAVAN TE VA A VER! \xA1EST\xC1 CONSUMIENDO A
+    SALAZAR!"
+  - "\xA1SI LOS TOCAS TAMBI\xC9N TE EMPEZAR\xC1 A CONSUMIR A TI!"
+  respuestas:
+  - responseText: "\xA1NO ME VOY SIN EL COFRE DE ESTA SALA!"
+    dialogueObject: {fileID: 11400000, guid: c844b1423504adb4189837ef4b67ca53, type: 2}

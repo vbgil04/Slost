@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cuaderno
   m_EditorClassIdentifier: 
   burbujasDialogo:
-  - "Los arcoiris siempre han sido una gran fuente de inspiraci\xF3n para mi. El
-    \xFAnico problema que tienen es el color naranja."
-  - "- Alguien que seguramente trabaj\xF3 en la puerta."
+  - "El experimento de la fragmentaci\xF3n ha salido bien. Salazar tambi\xE9n ha
+    heredado el buen caracter de Sliem."
+  - "Ha sido extra\xF1o que sean dos, suele salir solo uno. -- Cuaderno de Emerio."
   respuestas: []
