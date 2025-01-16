@@ -17,6 +17,7 @@ MonoBehaviour:
   - "Solo se que tienes que conectar uno o m\xE1s en un orden espec\xEDfico para
     que se abra la puerta."
   - "Adem\xE1s si conectas uno erroneo har\xE1 cortocircuito y se bloquear\xE1."
+  - "Cuando quieras probar una combinaci\xF3n ponte delante de la puerta."
   respuestas:
   - responseText: "Maravilloso, \xBFalguna pisto oohh?"
     dialogueObject: {fileID: 11400000, guid: 8a6a459efa0cd454b9f237cd9243c651, type: 2}

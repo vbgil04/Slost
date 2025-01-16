@@ -16,4 +16,4 @@ MonoBehaviour:
   - ...
   respuestas:
   - responseText: '*Suspiras* Voy a coger las bales e irme.'
-    dialogueObject: {fileID: 0}
+    dialogueObject: {fileID: 11400000, guid: d4f8283de0043674490726908f5dfc38, type: 2}

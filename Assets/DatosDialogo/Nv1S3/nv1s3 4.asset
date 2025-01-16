@@ -16,4 +16,4 @@ MonoBehaviour:
   - "\xA1NADA! \xA1S\xCDLAVAN NO EST\xC1 HACIENDO NADA!"
   respuestas:
   - responseText: ".... T\xFA tambi\xE9n le temes."
-    dialogueObject: {fileID: 0}
+    dialogueObject: {fileID: 11400000, guid: 8ef0da3852d887e4e8d7340d060d1ac6, type: 2}

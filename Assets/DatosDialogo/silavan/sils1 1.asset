@@ -15,5 +15,5 @@ MonoBehaviour:
   burbujasDialogo:
   - "\xA1\xA1TRAIDOR!!! \xA1\xA1HIP\xD3CRITA!! \xA1\xA1LARGATE DE AQU\xCD!!"
   respuestas:
-  - responseText: "Espera, \xBFqu\xE9? No se de que me eat\xE1s hablando. "
+  - responseText: "Espera, \xBFqu\xE9? No se de que me est\xE1s hablando. "
     dialogueObject: {fileID: 11400000, guid: bb7e07b6e5ed0d145b781c8f33b24b98, type: 2}

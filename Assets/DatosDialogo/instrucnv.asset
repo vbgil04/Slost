@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: instrucnv
   m_EditorClassIdentifier: 
   burbujasDialogo:
-  - El se mantenimiento me dijo que han implementado un failsafe para las puertas.
+  - El de mantenimiento me dijo que han implementado un failsafe para las puertas.
   - "Con una bater\xEDa alargada azul y una pistola, disparas a un pivote de las
     pueras con slime."
-  - "Luego pones la bater\xEDa encima y hace cortocircuito, abriendo la puerta. --
-    Cuaderno de Emerio."
+  - "Luego pones la bater\xEDa encima y hace cortocircuito, abriendo la puerta si
+    te pones en frente. -- Cuaderno de Emerio."
   respuestas: []

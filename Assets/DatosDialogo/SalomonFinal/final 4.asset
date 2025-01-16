@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34d41fb80e85cd47a384443535ae04a, type: 3}
+  m_Name: final 4
+  m_EditorClassIdentifier: 
+  burbujasDialogo:
+  - "Eras un astronauta que fue a Venus. All\xED tus compa\xF1eros. Descubrieron
+    a Sliem, el 1er slime que vosotros los humanos descubristeis."
+  - "Emerio, tu compa\xF1ero, fue el que descubri\xF3 que est\xE1bamos vivos. "
+  - "T\xFA en cambio descubriste como fragmentarnos, tortur\xE1ndonos en el proceso."
+  - Era un gran descubrimiento para vosotros, cuando un slime se fragmenta genera
+    una consciencia a parte de la suya.
+  - "La madre y el hijo se separan por una explosi\xF3n que ocurre al final del proceso. "
+  - "Al parecer esa energ\xEDa generada en la explosi\xF3n es muy valiosa para vosotros
+    los humanos."
+  - "Salazar y yo nos fragmentamos de Sliem, S\xEDlavan en cambio es mi hijo, se
+    fragment\xF3 de mi."
+  - "Cuando un slime se fragmenta pierde sus memorias, pero recuerda el inmenso dolor
+    que experiment\xF3 en la fragmentaci\xF3n."
+  respuestas:
+  - responseText: "\xBFPor eso S\xEDlavan me odia tanto?"
+    dialogueObject: {fileID: 11400000, guid: 0a4b3a366e97b7c48b4d3bf0be2b6f90, type: 2}
+  - responseText: "Gracias Salomon, no quiero saber nada m\xE1s. Adi\xF3s."
+    dialogueObject: {fileID: 11400000, guid: 3c91e2bfbb561454594daf453f1ca632, type: 2}

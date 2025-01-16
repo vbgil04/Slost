@@ -9,6 +9,8 @@ public class PuertaBajanv1 : MonoBehaviour
             VariablesGlobalesEventos.puertaQueBaja1salaActiva = true;
             VariablesGlobalesEventos.contSalomon = 0;
             Destroy(gameObject);
+        } else if (VariablesGlobalesEventos.puertaQueBaja1salaActiva){
+            Destroy(gameObject);
         }
     }
 }

@@ -46,7 +46,10 @@ public class Pausa : MonoBehaviour
     }
     public void Reload(){
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         panelPausa.SetActive(false); // desactivo el panel de pausa
+        ReinicioMuerte reinicioMuerte = new ReinicioMuerte();
+        reinicioMuerte.RestReinicioMuerte();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
     }
 }

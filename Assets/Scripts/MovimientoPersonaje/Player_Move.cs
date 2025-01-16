@@ -180,7 +180,8 @@ public class Player_Move : MonoBehaviour
     }
 
     void muerte(){
-        GlobalVariables.maxSlimes = 3;
+         ReinicioMuerte reinicioMuerte = new ReinicioMuerte();
+        reinicioMuerte.RestReinicioMuerte();
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
     void Update()
