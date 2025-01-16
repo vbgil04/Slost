@@ -38,6 +38,7 @@ public class Pausa : MonoBehaviour
         panelPausa.SetActive(false); // desactivo el panel de pausa
         pausado = false; // cambio la variable de pausa a falso
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     public void MenuPrinc(){
         Time.timeScale = 1f;
@@ -50,6 +51,5 @@ public class Pausa : MonoBehaviour
         ReinicioMuerte reinicioMuerte = new ReinicioMuerte();
         reinicioMuerte.RestReinicioMuerte();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        
     }
 }

@@ -17,6 +17,7 @@ public class DarPistola : MonoBehaviour
             prop.SetActive(false);
             canvasmira.SetActive(true);
             puerta.tag = "Objeto Interactivo";
+            VariablesGlobalesEventos.prop = true;
             Destroy(gameObject);
         }
     }

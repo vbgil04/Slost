@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34d41fb80e85cd47a384443535ae04a, type: 3}
+  m_Name: final 11
+  m_EditorClassIdentifier: 
+  burbujasDialogo:
+  - "Son slimes que han sido fragmentados m\xFAltiples veces y han sido qu\xEDmicamene
+    alterados para buscar la pistola y poder moverse."
+  - "As\xED regresan a ella cuando les indicas. Est\xE1n en un estado semi inerte,
+    pero eso no quita que est\xE9n sufriendo, mucho m\xE1s que S\xEDlavan."
+  respuestas:
+  - responseText: "... \xBFSabes por qu\xE9 hice todo esto?"
+    dialogueObject: {fileID: 11400000, guid: 84f954cb0aae1e047803141115d0d894, type: 2}
+  - responseText: "Gracias Salomon, no quiero saber nada m\xE1s. Adi\xF3s."
+    dialogueObject: {fileID: 11400000, guid: 3c91e2bfbb561454594daf453f1ca632, type: 2}

@@ -18,7 +18,7 @@ MonoBehaviour:
   - "No se c\xF3mo te ejecutaron la verdad, pero que mal lo hicieron.  Recuerdo que
     te condenaron por intentar proteger a Sliem."
   respuestas:
-  - responseText: "... \xBFSabes por qu\xE9 hice todo esto?"
-    dialogueObject: {fileID: 11400000, guid: 84f954cb0aae1e047803141115d0d894, type: 2}
+  - responseText: "\xBFQu\xE9 les ha pasado a los slimes que sin mis balas?"
+    dialogueObject: {fileID: 11400000, guid: f61f765871a1d724092c544a046c683b, type: 2}
   - responseText: "Gracias Salomon, no quiero saber nada m\xE1s. Adi\xF3s."
     dialogueObject: {fileID: 11400000, guid: 3c91e2bfbb561454594daf453f1ca632, type: 2}

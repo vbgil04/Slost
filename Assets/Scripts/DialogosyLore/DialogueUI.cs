@@ -26,6 +26,7 @@ public class DialogueUI : MonoBehaviour
     public void ShowDialogue(ObjetoDialogo dialogueObject) {
         Debug.Log("D0");
         player.GetComponent<Player_Move>().enabled = false;
+        player.GetComponent<Pausa>().enabled = false;
         camara.GetComponent<Camara_Move>().enabled = false;
         camara.GetComponent<Selected>().enabled = false;
         pistola.GetComponent<FuncionamientoPistola>().enabled = false;
@@ -58,6 +59,7 @@ public class DialogueUI : MonoBehaviour
         Debug.Log("D4");
         dialoguePanel.SetActive(false);
         player.GetComponent<Player_Move>().enabled = true;
+        player.GetComponent<Pausa>().enabled = true;
         camara.GetComponent<Camara_Move>().enabled = true;
         camara.GetComponent<Selected>().enabled = true;
         pistola.GetComponent<FuncionamientoPistola>().enabled = true;

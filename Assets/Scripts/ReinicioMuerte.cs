@@ -5,6 +5,7 @@ using UnityEngine;
 public class ReinicioMuerte : MonoBehaviour
 {
     public void RestReinicioMuerte(){
+        VariablesGlobalesEventos.prop = false;
         VariablesGlobalesEventos.CuadernoNotas1 = false;
          VariablesGlobalesEventos.cableIzqConectado = false;
          VariablesGlobalesEventos.cableDerConectado = false;
@@ -42,6 +43,7 @@ public class ReinicioMuerte : MonoBehaviour
     }
     }
     public void InicioMenu(){
+        VariablesGlobalesEventos.prop = false;
         VariablesGlobalesEventos.CuadernoNotas1 = false;
          VariablesGlobalesEventos.cableIzqConectado = false;
          VariablesGlobalesEventos.cableDerConectado = false;

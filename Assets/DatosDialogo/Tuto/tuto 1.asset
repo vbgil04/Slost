@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34d41fb80e85cd47a384443535ae04a, type: 3}
+  m_Name: tuto 1
+  m_EditorClassIdentifier: 
+  burbujasDialogo:
+  - "Vete hacia la derecha, ve busc\xE1ndome y te guiar\xE9 hasta la pistola de slime
+    para abrir la puerta de la estaci\xF3n."
+  - "Puedes moverte con las flechas o WASD, saltar con espacio y el Tab te sacar\xE1
+    un men\xFA. "
+  - "Ten cuidado al caerte de sitios altos o caer al vac\xEDo. Te har\xE1s da\xF1o
+    y te desmayar\xE1s."
+  respuestas: []

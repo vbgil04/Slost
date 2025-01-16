@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34d41fb80e85cd47a384443535ae04a, type: 3}
+  m_Name: tuto 8
+  m_EditorClassIdentifier: 
+  burbujasDialogo:
+  - "Hacia la derecha ve recorriendo la estaci\xF3n."
+  - "Ve b\xFAsc\xE1ndome por la zona y habla conmigo para que te vaya d\xE1ndo instrucciones."
+  respuestas:
+  - responseText: "Val.. \xBFNo vienes c\xF3nmigo? No quiero ir solo."
+    dialogueObject: {fileID: 11400000, guid: a7c0c9c090b61a645b9bd0c7a83f23ea, type: 2}

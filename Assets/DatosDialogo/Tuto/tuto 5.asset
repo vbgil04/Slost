@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34d41fb80e85cd47a384443535ae04a, type: 3}
+  m_Name: tuto 5
+  m_EditorClassIdentifier: 
+  burbujasDialogo:
+  - "Rel\xE1jate. A ver, deber\xEDas irte de aqu\xED. Este sitio no es muy seguro.
+    Para empezar no hay comida para ti."
+  - "Y luego est\xE1 el tema de que este sitio est\xE1 ruinoso, no hay m\xE1s humanos
+    por lo que nadie lo mantiene. "
+  - "Deber\xEDas irte. Cuanto antes."
+  respuestas:
+  - responseText: "*En p\xE1nico* Vale, \xBFc\xF3mo hago eso?"
+    dialogueObject: {fileID: 11400000, guid: 4f58429e29badab44a8cd0c75ac2f279, type: 2}

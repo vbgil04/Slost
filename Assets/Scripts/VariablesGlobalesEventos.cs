@@ -11,6 +11,7 @@ public static class VariablesGlobalesEventos {
         public static int contSilS1 = 0;
         public static int contSal1 = 0;
         public static int conSaloTuto = 0;
+        public static bool prop = false;
         public static bool CuadernoNotas1 = false;
         public static bool cableIzqConectado = false;
         public static bool cableDerConectado = false;
